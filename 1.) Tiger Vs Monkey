@@ -1,0 +1,115 @@
+#include<iostream>
+using namespace std;
+
+
+int main(){
+    int monkey=3;
+    int tiger=3;
+    int n,choice;
+    int ct=0,cm=0;
+    int cttemp=0,cmtemp=0;
+    cout<<"----------------Tiger Monkey Game------------------"<<endl;
+    cout<<"\n";
+    cout<<"Instructions :- You can select only upto 2 individuals at a time to cross the river"<<endl;
+    cout<<"\n";
+    cout<<"The Game begins"<<endl;
+    while(monkey!=0 || tiger!=0){
+        cout<<"\n";
+        cout<<monkey<<" Monkey & "<<tiger<<" Tiger are waiting to cross the river"<<endl;
+        cout<<"\n";
+        cout<<"How many individuals do you want to cross ?"<<endl;
+            cin>>n;
+        if(n==1 || n==2){
+            
+            cout<<"\n";
+        
+        cout<<"Select animals "<<endl;
+        cout<<"\n";
+        
+        cout<<"1. Monkey:- "<<monkey<<" left"<<endl;
+        cout<<"\n";
+        cout<<"2. Tiger:- "<<tiger<<" left"<<endl;
+        cout<<"\n";
+        while(n>0){
+            
+        cout<<"Enter your choice:-"<<endl;
+            cin>>choice;
+          cout<<"\n";
+                
+                switch(choice){
+                        case 1: 
+                                if(monkey!=0){
+                                 cm++;
+                                 cmtemp++;
+                                monkey--;
+                                // cout<<"\n";
+                                // cout<<cm<<" Monkeys crossed the river & "<<monkey<<" are left"<<endl;
+                                }
+                                break;
+                                
+                        case 2:
+                                if(tiger!=0){
+                                 ct++;
+                                tiger--;
+                                cttemp++;
+                                // cout<<"\n";
+                                // cout<<ct<<" Tigers crossed the river & "<<tiger<<" are left"<<endl;
+                                }
+                                break;
+                        default:
+                                cout<<"\n";
+                                cout<<"\nInvalid";
+                                exit(0);
+
+                    }
+                    n--;
+                    
+        }
+        // cout<<"\n";
+        // cout<<cm<<" Monkeys crossed the river & "<<monkey<<" are left"<<endl;
+        // cout<<"\n";
+        // cout<<ct<<" Tigers crossed the river & "<<tiger<<" are left"<<endl;
+        // cout<<"\n";
+
+        cout<<"Boat started journey with "<<cttemp<<" tiger & "<<cmtemp<<" monkey"<<endl;
+        cout<<"\n";
+        cout<<"Total "<<cm<<" Monkey crossed the river & "<<monkey<<" left"<<endl;
+        cout<<"\n";
+        cout<<"Total "<<ct<<" Tiger crossed the river & "<<tiger<<" left"<<endl;
+        cout<<"\n";
+
+        cout<<"Boat is returing back"<<"\n\nBoat returned sucessfully"<<endl;
+
+        cttemp=0;
+        cmtemp=0;
+        
+        
+        if(monkey<tiger && monkey!=0){
+                        cout<<"\n";
+                        cout<<tiger<<" tiger killed "<<monkey<<" monkey\n";
+                        cout<<"\nYou Loss! : Game ended";
+                        exit(0);
+                    }
+                    
+        }
+
+        else{
+            cout<<"\n";
+            cout<<"\nInvalid Crossing number must be (1/2)"<<endl;
+            exit(0);
+        }
+        // if(monkey==0 && tiger!=0){
+        //     cout<<"\n";
+        //     cout<<"Game Ended"<<endl;
+        // } 
+
+        if(monkey==0 && tiger==0){
+            cout<<"\n";
+            cout<<"All animals were crossed the river sucessfully\n\n";
+            cout<<"Congratulations : You win"<<endl;
+        } 
+
+    }
+}
+    
+
