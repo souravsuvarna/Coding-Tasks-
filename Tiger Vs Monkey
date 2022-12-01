@@ -42,8 +42,7 @@ int main(){
                                  cm++;
                                  cmtemp++;
                                 monkey--;
-                                // cout<<"\n";
-                                // cout<<cm<<" Monkeys crossed the river & "<<monkey<<" are left"<<endl;
+                               
                                 }
                                 break;
                                 
@@ -52,8 +51,6 @@ int main(){
                                  ct++;
                                 tiger--;
                                 cttemp++;
-                                // cout<<"\n";
-                                // cout<<ct<<" Tigers crossed the river & "<<tiger<<" are left"<<endl;
                                 }
                                 break;
                         default:
@@ -65,11 +62,7 @@ int main(){
                     n--;
                     
         }
-        // cout<<"\n";
-        // cout<<cm<<" Monkeys crossed the river & "<<monkey<<" are left"<<endl;
-        // cout<<"\n";
-        // cout<<ct<<" Tigers crossed the river & "<<tiger<<" are left"<<endl;
-        // cout<<"\n";
+        
 
         cout<<"Boat started journey with "<<cttemp<<" tiger & "<<cmtemp<<" monkey"<<endl;
         cout<<"\n";
@@ -98,10 +91,7 @@ int main(){
             cout<<"\nInvalid Crossing number must be (1/2)"<<endl;
             exit(0);
         }
-        // if(monkey==0 && tiger!=0){
-        //     cout<<"\n";
-        //     cout<<"Game Ended"<<endl;
-        // } 
+     } 
 
         if(monkey==0 && tiger==0){
             cout<<"\n";
