@@ -2,104 +2,200 @@
 using namespace std;
 
 
+
+
 int main(){
-    int monkey=3;
-    int tiger=3;
-    int n,choice;
-    int ct=0,cm=0;
-    int cttemp=0,cmtemp=0;
-    cout<<"----------------Tiger Monkey Game------------------"<<endl;
-    cout<<"\n";
-    cout<<"Instructions :- You can select only upto 2 individuals at a time to cross the river"<<endl;
-    cout<<"\n";
-    cout<<"The Game begins"<<endl;
-    while(monkey!=0 || tiger!=0){
-        cout<<"\n";
-        cout<<monkey<<" Monkey & "<<tiger<<" Tiger are waiting to cross the river"<<endl;
-        cout<<"\n";
-        cout<<"How many individuals do you want to cross ?"<<endl;
-            cin>>n;
-        if(n==1 || n==2){
-            
-            cout<<"\n";
-        
-        cout<<"Select animals "<<endl;
-        cout<<"\n";
-        
-        cout<<"1. Monkey:- "<<monkey<<" left"<<endl;
-        cout<<"\n";
-        cout<<"2. Tiger:- "<<tiger<<" left"<<endl;
-        cout<<"\n";
-        while(n>0){
-            
-        cout<<"Enter your choice:-"<<endl;
-            cin>>choice;
-          cout<<"\n";
-                
-                switch(choice){
-                        case 1: 
-                                if(monkey!=0){
-                                 cm++;
-                                 cmtemp++;
-                                monkey--;
-                               
-                                }
-                                break;
-                                
-                        case 2:
-                                if(tiger!=0){
-                                 ct++;
-                                tiger--;
-                                cttemp++;
-                                }
-                                break;
-                        default:
-                                cout<<"\n";
-                                cout<<"\nInvalid";
-                                exit(0);
+int mA=3,tA=3;
+int mB=0,tB=0;
+int ch,an,ct=0,cm=0;
+cout<<"------Tiger-Monkey Game-----\n"<<endl;
 
-                    }
-                    n--;
-                    
-        }
-        
+while(mA!=0 || tA!=0 ){
+cout<<"\n"<<mA<<" Monkey and "<<tA<<" Tiger in side A"<<endl;
 
-        cout<<"Boat started journey with "<<cttemp<<" tiger & "<<cmtemp<<" monkey"<<endl;
-        cout<<"\n";
-        cout<<"Total "<<cm<<" Monkey crossed the river & "<<monkey<<" left"<<endl;
-        cout<<"\n";
-        cout<<"Total "<<ct<<" Tiger crossed the river & "<<tiger<<" left"<<endl;
-        cout<<"\n";
-
-        cout<<"Boat is returing back"<<"\n\nBoat returned sucessfully"<<endl;
-
-        cttemp=0;
-        cmtemp=0;
-        
-        
-        if(monkey<tiger && monkey!=0){
-                        cout<<"\n";
-                        cout<<tiger<<" tiger killed "<<monkey<<" monkey\n";
-                        cout<<"\nYou Loss! : Game ended";
-                        exit(0);
-                    }
-                    
-        }
-
-        else{
-            cout<<"\n";
-            cout<<"\nInvalid Crossing number must be (1/2)"<<endl;
-            exit(0);
-        }
-     } 
-
-        if(monkey==0 && tiger==0){
-            cout<<"\n";
-            cout<<"All animals were crossed the river sucessfully\n\n";
-            cout<<"Congratulations : You win"<<endl;
-        } 
-
-    }
+//copy code
+if(mA<tA && mA!=0){
+    cout<<"\n"<<tA<<" Tigers killed "<<mA<<" Monkey in End A"<<endl;;
+    cout<<"\nYou Loss: Game Ended";
+    exit(0);
 }
-    
 
+//copy ended
+
+
+cout<<"\nHow many you want to cross ?(1/2)"<<endl;
+cin>>ch;
+int dub=ch;
+
+
+while(dub>0){
+if(ch==1|| ch==2){
+    s:
+        cout<<"\n----MENU----"<<endl;
+        cout<<"\n1.Monkey: "<<mA<<" Monkey there in End A"<<"\n\n2.Tiger: "<<tA<<" Tiger there in End A"<<endl;
+        cout<<"\nEnter :-"<<endl;
+        cin>>an;
+
+        
+
+        switch (an){
+            case 1:
+                    if(mA!=0){
+                    mB++;
+                    mA--;
+                    cm++;
+                    }
+                    else{
+                        cout<<"\nMonkey is not there in End A"<<endl;
+                        goto s;
+                    }
+                    break;
+            case 2:
+                    if(tA!=0){
+                    tB++;
+                    tA--;
+                    ct++;
+                    }
+                    else{
+                        cout<<"\nTiger is not there in End A"<<endl;
+                        goto s;
+                    }
+                    break;
+            default:
+                    cout<<"\nInvalid";
+                    exit(0);
+        }
+
+    
+    
+}
+else{
+    cout<<"\nInvalid Entry Or Please check number of animals in the End B";
+    exit(0);
+}
+
+dub--;
+
+}
+
+
+cout<<"\nBoat started journey with "<<ct<<" Tiger and "<<cm<<" Monkey"<<endl;
+cm=0;
+ct=0;
+cout<<"\nBoat reached the End B Sucessfully"<<endl;
+
+if(mA<tA && mA!=0){
+    cout<<"\n"<<tA<<" Tigers killed "<<mA<<" Monkey in End A"<<endl;;
+    cout<<"\nYou Loss: Game Ended";
+    exit(0);
+}
+
+
+
+//End B
+cout<<"\n";
+cout<<mB<<" Monkey and "<<tB<<" Tiger in side B"<<endl;
+
+
+// copy code
+if(mB<tB && mB!=0){
+    cout<<"\n"<<tB<<" Tigers killed "<<mB<<" Monkey in End B"<<endl;
+    cout<<"\nYou Loss: Game Ended"<<endl;
+    exit(0);
+}
+//copy code ended
+
+
+if(mB==3 && tB==3){
+    cout<<"\nCongratulations: YOU WIN!!!"<<endl;
+exit(0);
+
+}
+
+cout<<"\nBoat ready to start from End B to End A"<<endl;
+cout<<"\nHow many you want to cross ?(1/2)"<<endl;
+cin>>ch;
+dub=ch;
+
+
+
+//copy code
+
+
+while(dub>0){
+if(ch==1|| ch==2 && ch<=mB+tB){
+    v:
+        cout<<"\n----MENU----"<<endl;
+        cout<<"\n1.Monkey: "<<mB<<" Monkey there in End B"<<"\n\n2.Tiger: "<<tB<<" Tiger there in End B"<<endl;
+        cout<<"\nEnter :-"<<endl;
+        cin>>an;
+
+        
+
+        switch (an){
+            case 1:
+                    if(mB!=0){
+                    mA++;
+                    mB--;
+                    cm++;
+                    }
+                    else{
+                        cout<<"\nMonkey is not there in End B"<<endl;
+                        goto v;
+
+                    }
+                    break;
+            case 2:
+                    if(tB!=0){
+                    tA++;
+                    tB--;
+                    ct++;
+                    }
+                    else{
+                        cout<<"\nTiger is not there in End B"<<endl;
+                        goto v;
+                    }
+                    break;
+            default:
+                    cout<<"\nInvalid";
+                    exit(0);
+        }
+
+    
+    
+}
+else{
+    cout<<"\nInvalid Input Or Please check number of animals in the End B";
+    exit(0);
+}
+
+dub--;
+
+}
+
+//copy code ended
+
+
+
+//another copy code
+
+
+cout<<"\nBoat started journey with "<<ct<<" Tiger and "<<cm<<" Monkey"<<endl;
+cm=0;
+ct=0;
+cout<<"\nBoat reached the End A Sucessfully"<<endl;
+
+if(mB<tB && mB!=0){
+    cout<<"\n"<<tB<<" Tigers killed "<<mB<<" Monkey in End B"<<endl;
+    cout<<"\nYou Loss: Game Ended"<<endl;
+    exit(0);
+}
+
+//copy code ended
+
+}
+
+
+cout<<"\nCongratulations: YOU WIN!!!"<<endl;
+exit(0);
+}
