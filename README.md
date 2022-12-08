@@ -7,4 +7,4 @@ Description:-
 Instructions:-
 1.)You can select upto 2 individuals only to the boat at a time
 2.)Win only if all individuals cross the river
-3.)If number of monkeys in the beginning shore is less than tiger in beginning shore then all monkeys in that shore will killed by those tigers and You Loose & game ends 
+3.)If number of monkeys are less than tigers in any shore then all monkeys in that shore will killed by those tigers and You Loose & game ends 
