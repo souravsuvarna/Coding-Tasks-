@@ -123,7 +123,7 @@ dub=ch;
 
 
 while(dub>0){
-if(ch==1|| ch==2 && ch<=mB+tB){
+if(ch==1|| ch==2 && dub<=mB+tB){
     v:
         cout<<"\n----MENU----"<<endl;
         cout<<"\n1.Monkey: "<<mB<<" Monkey there in End B"<<"\n\n2.Tiger: "<<tB<<" Tiger there in End B"<<endl;
