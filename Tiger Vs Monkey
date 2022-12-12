@@ -13,16 +13,15 @@ cout<<"------Tiger-Monkey Game-----\n"<<endl;
 while(mA!=0 || tA!=0 ){
 cout<<"\n"<<mA<<" Monkey and "<<tA<<" Tiger in side A"<<endl;
 
-//copy code
+
 if(mA<tA && mA!=0){
     cout<<"\n"<<tA<<" Tigers killed "<<mA<<" Monkey in End A"<<endl;;
     cout<<"\nYou Loss: Game Ended";
     exit(0);
 }
 
-//copy ended
 
-
+s1:
 cout<<"\nHow many you want to cross ?(1/2)"<<endl;
 cin>>ch;
 int dub=ch;
@@ -62,7 +61,8 @@ if(ch==1|| ch==2){
                     }
                     break;
             default:
-                    cout<<"\nInvalid";
+                    cout<<"\nInvalid\n";
+                    goto s;
                     exit(0);
         }
 
@@ -70,7 +70,8 @@ if(ch==1|| ch==2){
     
 }
 else{
-    cout<<"\nInvalid Entry Or Please check number of animals in the End B";
+    cout<<"\nInvalid Entry Or Please check number of animals in the End B\n";
+    goto s1;
     exit(0);
 }
 
@@ -97,13 +98,13 @@ cout<<"\n";
 cout<<mB<<" Monkey and "<<tB<<" Tiger in side B"<<endl;
 
 
-// copy code
+
 if(mB<tB && mB!=0){
     cout<<"\n"<<tB<<" Tigers killed "<<mB<<" Monkey in End B"<<endl;
     cout<<"\nYou Loss: Game Ended"<<endl;
     exit(0);
 }
-//copy code ended
+
 
 
 if(mB==3 && tB==3){
@@ -113,13 +114,15 @@ exit(0);
 }
 
 cout<<"\nBoat ready to start from End B to End A"<<endl;
+
+v1:
 cout<<"\nHow many you want to cross ?(1/2)"<<endl;
 cin>>ch;
 dub=ch;
 
 
 
-//copy code
+
 
 
 while(dub>0){
@@ -157,7 +160,8 @@ if(ch==1|| ch==2 && dub<=mB+tB){
                     }
                     break;
             default:
-                    cout<<"\nInvalid";
+                    cout<<"\nInvalid\n";
+                    goto v;
                     exit(0);
         }
 
@@ -165,7 +169,8 @@ if(ch==1|| ch==2 && dub<=mB+tB){
     
 }
 else{
-    cout<<"\nInvalid Input Or Please check number of animals in the End B";
+    cout<<"\nInvalid Input Or Please check number of animals in the End B\n";
+    goto v1;
     exit(0);
 }
 
@@ -173,11 +178,8 @@ dub--;
 
 }
 
-//copy code ended
 
 
-
-//another copy code
 
 
 cout<<"\nBoat started journey with "<<ct<<" Tiger and "<<cm<<" Monkey"<<endl;
@@ -191,7 +193,7 @@ if(mB<tB && mB!=0){
     exit(0);
 }
 
-//copy code ended
+
 
 }
 
