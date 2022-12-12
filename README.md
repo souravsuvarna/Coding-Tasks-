@@ -1,7 +1,7 @@
 # Coding-Tasks
 
 Task - 1
-Monkey Vs Tiger Console game
+Monkey Vs Tiger River Crossing Riddle
 
 Description:-
   3 Monkeys & 3 tigers were will be in a shore and you have to help them to cross river using boat. 
