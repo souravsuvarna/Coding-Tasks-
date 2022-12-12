@@ -1,9 +1,6 @@
 #include<iostream>
 using namespace std;
 
-
-
-
 int main(){
 int mA=3,tA=3;
 int mB=0,tB=0;
