@@ -1,6 +1,6 @@
-# Coding-Task
+# Coding-Tasks
 
-//Task - 1
+Task - 1
 Monkey Vs Tiger Console game
 
 Description:-
